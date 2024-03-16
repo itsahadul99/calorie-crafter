@@ -3,14 +3,27 @@ import Banner from "./components/Banner/Banner"
 import Cards from "./components/Cards/Cards"
 import Header from "./components/Header/Header"
 import Sidebar from "./components/Sidebar/Sidebar"
+// import { ToastContainer, toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const [cards, setCards] = useState([]);
+  const [product, setProduct] = useState([]);
   useEffect(() => {
     fetch('fakeData.json')
       .then(res => res.json())
       .then(data => setCards(data))
-  }, [])
+  }, []);
+  const handleSideBar = (products) => {
+    const isExit = product.find(item => item.recipe_id === products.recipe_id);
+    if (!isExit) {
+      const newProducts = [...product, products];
+      setProduct(newProducts);
+    }
+    else {
+      alert('already preparing')
+    }
+  }
   return (
     <>
       <Header />
@@ -21,10 +34,13 @@ function App() {
           <p className="mx-auto text-center w-8/12">Welcome to our recipe collection! Here you'll find delicious dishes passed down through generations, alongside creative new favorites. We love using fresh, seasonal ingredients to create healthy and flavorful meals for the whole family.</p>
         </div>
         <div className="flex flex-col-reverse lg:flex-row justify-between gap-5 lg:gap-14">
-          <Cards 
-            cards ={cards}
+          <Cards
+            cards={cards}
+            handleSideBar={handleSideBar}
           />
-          <Sidebar />
+          <Sidebar
+            product={product}
+          />
         </div>
       </main>
     </>

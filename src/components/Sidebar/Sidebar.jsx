@@ -1,6 +1,6 @@
 import { useState } from "react";
 import CurrentlyCooking from "../CurrentlyCooking/CurrentlyCooking";
-const Sidebar = ({ product, handleDelete }) => {
+const Sidebar = ({ product, handleDelete, totalTime, totalCalories }) => {
     const [sideProduct, setSideProduct] = useState([]);
     const handlePreparing = (item) => {
         setSideProduct([...sideProduct, item]);
@@ -29,7 +29,7 @@ const Sidebar = ({ product, handleDelete }) => {
                                         <td>{item.recipe_name}</td>
                                         <td>{item.preparing_time} <br /> minute</td>
                                         <td>{item.calories} <br /> calories</td>
-                                        <td><button onClick={() => { handlePreparing(item); handleDelete(item.recipe_id) }} className="mt-3 py-2 px-2 rounded-full bg-[#0BE58A] font-semibold text-black hover:bg-[#0be58a9c]">Preparing</button></td>
+                                        <td><button onClick={() => { handlePreparing(item); handleDelete(item.recipe_id, item.preparing_time, item.calories) }} className="mt-3 py-2 px-2 rounded-full bg-[#0BE58A] font-semibold text-black hover:bg-[#0be58a9c]">Preparing</button></td>
                                     </tr>
                                 )
                             })
@@ -39,6 +39,8 @@ const Sidebar = ({ product, handleDelete }) => {
             </div>
             <CurrentlyCooking
                 sideProduct={sideProduct}
+                totalTime={totalTime}
+                totalCalories={totalCalories}
             />
         </div>
     );

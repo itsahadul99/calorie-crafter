@@ -10,6 +10,8 @@ function App() {
 
   const [cards, setCards] = useState([]);
   const [product, setProduct] = useState([]);
+  const [totalTime, setTotalTime] = useState(0);
+  const [totalCalories, setTotalCalories] = useState(0);
 
   useEffect(() => {
     fetch('fakeData.json')
@@ -34,11 +36,13 @@ function App() {
   }
 
   // handle preparing 
-  const handleDelete = (id) => {
+  const handleDelete = (id, time, calories) => {
 
     const newSideBar = product.filter(item => item.recipe_id != id);
     setProduct(newSideBar);
     toast('✔✔ Added for cooking !!')
+    setTotalTime(time + totalTime);
+    setTotalCalories(calories + totalCalories)
   }
 
   return (
@@ -59,6 +63,8 @@ function App() {
           <Sidebar
             product={product}
             handleDelete={handleDelete}
+            totalTime={totalTime}
+            totalCalories={totalCalories}
           />
           <ToastContainer />
         </div>

@@ -1,4 +1,4 @@
-const CurrentlyCooking = ({ sideProduct }) => {
+const CurrentlyCooking = ({ sideProduct, totalTime, totalCalories }) => {
     return (
         <div>
             <h1 className="text-2xl font-bold py-5  text-center  ">Currently Cooking: {sideProduct.length}</h1>
@@ -25,10 +25,17 @@ const CurrentlyCooking = ({ sideProduct }) => {
                                         <td>{item.calories} calories</td>
                                     </tr>
                                 </tbody>
-
                             )
                         })
                     }
+                    <tfoot className="text-sm">
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th>Total Time = <br /> {totalTime} minute</th>
+                            <th>Total Calories = <br /> {totalCalories} calories</th>
+                        </tr>
+                    </tfoot>
                 </table>
             </div>
         </div>

@@ -1,0 +1,99 @@
+[
+    {
+        "recipe_image": "https://images.pexels.com/photos/12481161/pexels-photo-12481161.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "recipe_id": 1,
+        "recipe_name": "Pad Thai",
+        "short_description": "A classic Thai stir-fry with rice noodles, vegetables, egg, and protein",
+        "ingredients": [
+            "225 g dried rice noodles",
+            "3 tbsp vegetable oil",
+            "3 large eggs, beaten",
+            "1 shallot, thinly sliced",
+            "1 lime, juiced",
+            "Cilantro, for garnish"
+        ],
+        "preparing_time": "30",
+        "calories": "400"
+    },
+    {
+        "recipe_image": "https://images.pexels.com/photos/6632285/pexels-photo-6632285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "recipe_id": 2,
+        "recipe_name": "Buddha Bowl",
+        "short_description": "A customizable bowl filled with grains, protein, vegetables, and a flavorful dressing",
+        "ingredients": [
+            "1 cup cooked quinoa",
+            "1/2 cup roasted chickpeas",
+            "1/2 cup roasted sweet potato cubes",
+            "1 tbsp olive oil",
+            "1 tbsp lemon juice",
+            "Salt and pepper to taste"
+        ],
+        "preparing_time": "20",
+        "calories": "450"
+    },
+    {
+        "recipe_image": "https://images.pexels.com/photos/1775283/pexels-photo-1775283.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "recipe_id": 3,
+        "recipe_name": "Chocolate Chip Cookies",
+        "short_description": "A timeless treat - soft and chewy cookies filled with melty chocolate chips",
+        "ingredients": [
+            "1 cup all-purpose flour",
+            "1/2 tsp baking soda",
+            "1/4 tsp salt",
+            "1/2 cup brown sugar",
+            "1 large egg",
+            "1 cup semisweet chocolate chips"
+        ],
+        "preparing_time": "30",
+        "calories": "250"
+    },
+    {
+        "recipe_image": "https://images.pexels.com/photos/6546422/pexels-photo-6546422.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "recipe_id": 4,
+        "recipe_name": "Vegetarian Chili",
+        "short_description": "A protein-packed chili with beans, vegetables, and spices - perfect for a cold day",
+        "ingredients": [
+            "1 tbsp olive oil",
+            "1 onion, chopped",
+            "1 green bell pepper, chopped",
+            "2 carrots, diced",
+            "1 can (15 oz) diced tomatoes",
+            "Salt and pepper to taste"
+        ],
+        "preparing_time": "45",
+        "calories": "300"
+    },
+    {
+        "recipe_image": "https://images.pexels.com/photos/4006347/pexels-photo-4006347.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "recipe_id": 5,
+        "recipe_name": "Greek Yogurt Parfait",
+        "short_description": "A layered dessert with yogurt, granola, and fresh fruit",
+        "ingredients": [
+            "1 cup plain Greek yogurt",
+            "1/2 cup granola",
+            "1 cup cooked quinoa",
+            "1 shallot, thinly sliced",
+            "1 cup cooked quinoa",
+            "Salt and freshly ground black pepper to taste"
+        ],
+        "preparing_time": "45",
+        "calories": "300"
+    },
+    {
+        "recipe_image": "https://images.pexels.com/photos/8599861/pexels-photo-8599861.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "recipe_id": 6,
+        "recipe_name": "Tuscan White Bean Soup",
+        "short_description": "A hearty and flavorful soup with cannellini beans, kale, and Italian sausage",
+        "ingredients": [
+          "1 tablespoon olive oil",
+          "1 onion, chopped",
+          "1 (14.5-ounce) can diced tomatoes",
+          "4 cups low-sodium chicken broth",
+          "5 cups chopped kale",
+          "Salt and freshly ground black pepper to taste"
+        ],
+        "preparing_time": "40",
+        "calories": "400"
+      }
+      
+]

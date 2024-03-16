@@ -7,10 +7,10 @@ const Banner = () => {
                 <div className="hero-content text-center text-neutral-content">
                     <div className="space-y-2 lg:space-y-5">
                         <h1 className="text-xl lg:text-6xl font-bold">Discover an exceptional cooking <br /> class tailored for you!</h1>
-                        <p className="my-5 w-11/12 mx-auto text-xs lg:text-xl text-center">Learn and Master Basic Programming, Data Structures, Algorithm, OOP, Database and solve 500+ coding problems to become an exceptionally well world-class Programmer.</p>
+                        <p className="my-5 w-11/12 mx-auto text-xs lg:text-xl text-center">Join our vibrant cooking classes and have a blast learning alongside other food enthusiasts! Meet new people, share a delicious meal, and gain valuable kitchen skills.</p>
                         <div className=" flex justify-center gap-5">
                             <button className="bg-[#0BE58A] px-5 text-[#150B2B] font-semibold text-xs lg:text-xl py-1 lg:py-3 rounded-full hover:bg-[#0be58a9e]">Explore Now</button>
-                            <button className="border border-white px-5 py-3 rounded-full text-xs lg:text-xl hover:bg-gray-200 hover:text-black">Our Feedback</button>
+                            <button className="border-2 border-white px-5 py-3 rounded-full text-xs lg:text-xl hover:bg-gray-200 hover:text-black">Our Feedback</button>
                         </div>
                     </div>
                 </div>

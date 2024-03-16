@@ -3,10 +3,11 @@ import Banner from "./components/Banner/Banner"
 import Cards from "./components/Cards/Cards"
 import Header from "./components/Header/Header"
 import Sidebar from "./components/Sidebar/Sidebar"
-// import { ToastContainer, toast } from 'react-toastify';
-// import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
+
   const [cards, setCards] = useState([]);
   const [product, setProduct] = useState([]);
 
@@ -15,24 +16,31 @@ function App() {
       .then(res => res.json())
       .then(data => setCards(data))
   }, []);
+  // toast
+  const notify = () => {
 
+  }
   // handle want to cook button 
   const handleSideBar = (products) => {
     const isExit = product.find(item => item.recipe_id === products.recipe_id);
     if (!isExit) {
       const newProducts = [...product, products];
       setProduct(newProducts);
+      toast('✔✔ Added for preparing !!')
     }
     else {
-      alert('already preparing')
+      toast('Already exists !!')
     }
   }
+
   // handle preparing 
   const handleDelete = (id) => {
-    // console.log("preparing added soon", id);
+
     const newSideBar = product.filter(item => item.recipe_id != id);
     setProduct(newSideBar);
+    toast('✔✔ Added for cooking !!')
   }
+
   return (
     <>
       <Header />
@@ -46,11 +54,13 @@ function App() {
           <Cards
             cards={cards}
             handleSideBar={handleSideBar}
+            notify={notify}
           />
           <Sidebar
             product={product}
-            handleDelete= {handleDelete}
+            handleDelete={handleDelete}
           />
+          <ToastContainer />
         </div>
       </main>
     </>

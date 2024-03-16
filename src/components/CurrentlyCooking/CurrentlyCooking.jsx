@@ -1,5 +1,4 @@
 const CurrentlyCooking = ({ sideProduct }) => {
-    console.log(sideProduct);
     return (
         <div>
             <h1 className="text-2xl font-bold py-5  text-center  ">Currently Cooking: {sideProduct.length}</h1>

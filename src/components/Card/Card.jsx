@@ -1,8 +1,7 @@
 import { IoMdTime } from "react-icons/io";
 import { FaFire } from "react-icons/fa";
-const Card = ({card, handleSideBar}) => {
-    // console.log(card);
-    const {recipe_image, recipe_name, preparing_time, short_description, calories, ingredients} = card;
+const Card = ({ card, handleSideBar, notify }) => {
+    const { recipe_image, recipe_name, preparing_time, short_description, calories, ingredients } = card;
     return (
         <div className="card w-full lg:w-96 bg-base-100 shadow-xl border">
             <figure className="px-10 pt-10">
@@ -16,9 +15,6 @@ const Card = ({card, handleSideBar}) => {
                     {
                         ingredients.map((element, idx) => <li key={idx}>{element}</li>)
                     }
-                    {/* <li>500g ground beef</li>
-                    <li>500g ground beef</li>
-                    <li>500g ground beef</li> */}
                 </div>
                 <div className="flex items-center justify-between my-2">
                     <div className="flex items-center gap-2">
@@ -30,7 +26,7 @@ const Card = ({card, handleSideBar}) => {
                         <p>{calories} calories</p>
                     </div>
                 </div>
-                <button onClick={() => handleSideBar(card)} className="w-2/4 py-2 px-3 rounded-full bg-[#0BE58A] font-semibold text-black hover:bg-[#0be58a9c]">Want to Cook</button>
+                <button onClick={() => {handleSideBar(card); notify();}} className="w-2/4 py-2 px-3 rounded-full bg-[#0BE58A] font-semibold text-black hover:bg-[#0be58a9c]">Want to Cook</button>
             </div>
         </div>
     );

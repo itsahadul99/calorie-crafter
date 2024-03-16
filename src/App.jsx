@@ -9,11 +9,14 @@ import Sidebar from "./components/Sidebar/Sidebar"
 function App() {
   const [cards, setCards] = useState([]);
   const [product, setProduct] = useState([]);
+
   useEffect(() => {
     fetch('fakeData.json')
       .then(res => res.json())
       .then(data => setCards(data))
   }, []);
+
+  // handle want to cook button 
   const handleSideBar = (products) => {
     const isExit = product.find(item => item.recipe_id === products.recipe_id);
     if (!isExit) {
@@ -23,6 +26,12 @@ function App() {
     else {
       alert('already preparing')
     }
+  }
+  // handle preparing 
+  const handlePreparing = (id) => {
+    // console.log("preparing added soon", id);
+    const newSideBar = product.filter(item => item.recipe_id != id);
+    setProduct(newSideBar);
   }
   return (
     <>
@@ -40,6 +49,7 @@ function App() {
           />
           <Sidebar
             product={product}
+            handlePreparing= {handlePreparing}
           />
         </div>
       </main>

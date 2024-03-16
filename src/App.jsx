@@ -28,7 +28,7 @@ function App() {
     }
   }
   // handle preparing 
-  const handlePreparing = (id) => {
+  const handleDelete = (id) => {
     // console.log("preparing added soon", id);
     const newSideBar = product.filter(item => item.recipe_id != id);
     setProduct(newSideBar);
@@ -49,7 +49,7 @@ function App() {
           />
           <Sidebar
             product={product}
-            handlePreparing= {handlePreparing}
+            handleDelete= {handleDelete}
           />
         </div>
       </main>
